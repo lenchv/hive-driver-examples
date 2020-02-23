@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+  hive-server:
+    image: lenchv/hive:2.3.6
+    ports:
+      - "10000:10000"
+      - "10001:10001"
+      - "10002:10002"
+    command: /opt/apache-hive-2.3.6-bin/bin/hiveserver2
+    volumes:
+      - ./hive-site.xml:/opt/apache-hive-2.3.6-bin/conf/hive-site.xml
+      - ./assets/:/opt/assets/
+  hive-metastore:
+    image: lenchv/hive:2.3.6
+    ports:
+      - "9083:9083"
+    volumes:
+      - ./hive-site.xml:/opt/apache-hive-2.3.6-bin/conf/hive-site.xml
+    command: /opt/apache-hive-2.3.6-bin/bin/hive --service metastore
