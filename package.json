@@ -1,7 +1,7 @@
 {
   "name": "hive-driver-examples",
   "version": "1.0.0",
-  "description": "Example for Hive Driver",
+  "description": "Examples for Hive Driver",
   "main": "index.js",
   "dependencies": {
     "hive-driver": "0.0.1"
@@ -11,5 +11,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Volodymyr Liench <lenchvov@gmail.com> (https://github.com/lenchv)",
-  "license": "ISC"
+  "license": "MIT"
 }
